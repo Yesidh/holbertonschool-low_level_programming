@@ -1,0 +1,1 @@
+I'a Holberton	student, in this project we are learning about a first things in C language and a basic structures for do code to Holberton. for example understanding C program compilation process.
