@@ -1,0 +1,1 @@
+for this activities we are learning about C commands like: printf, puts, putchar, gcc, sizeof
