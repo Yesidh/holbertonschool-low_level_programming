@@ -1,15 +1,14 @@
 #include <stdio.h>
-
 /**
- * print_hello - prints hello with puts
- * 
- * 
- * 
- * 
+ * main - prints hello with puts
+ *
+ *
+ *
+ *
  * Return: return 0
  */
-void print_hello(void)
+int main(void)
 {
-puts("\"Programming is like building a multilingual puzzle");
-return (0);
+	puts("\"Programming is like building a multilingual puzzle \n");
+	return (0);
 }
