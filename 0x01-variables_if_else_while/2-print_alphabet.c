@@ -5,7 +5,7 @@
  *
  *
  *
- * Return - string with lower case
+ * Return: string with lower case
  */
 int main(void)
 {
