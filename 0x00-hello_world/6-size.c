@@ -9,16 +9,10 @@
  */
 int main(void)
 {
-	chart b;
-	int c;
-	long int d;
-	long long int e;
-	float f;
-
-	printf("size of a char: %ld. byte(s)\n", sizeof(b));
-	printf("size of an int: %ld. bytes(s)\n", sizeof(c));
-	printf("size of a long int: %ld. bytes(s)\n", sizeof(d));
-	printf("size of a long long int: %ld. bytes(s)\n", sizeof(e));
-	printf("size of a float: %ld. bytes(s)\n", sizeof(f));
+	printf("size of a char: %d byte(s)\n", sizeof(char));
+	printf("size of an int: %d bytes(s)\n", sizeof(int));
+	printf("size of a long int: %d bytes(s)\n", sizeof(long int));
+	printf("size of a long long int: %d bytes(s)\n", sizeof(long long int));
+	printf("size of a float: %d bytes(s)\n", sizeof(float));
 	return (0);
 }
