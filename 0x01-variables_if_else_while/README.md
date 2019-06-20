@@ -1,0 +1,1 @@
+learning about arithmetics operator in C, statements if, if/else, relational operators while loop
