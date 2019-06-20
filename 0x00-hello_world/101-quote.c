@@ -1,10 +1,6 @@
 #include <unistd.h>
 /**
  * main - prints a string to the standard eror.
- *
- *
- *
- *
  * Return: return 1
  */
 int main(void)
