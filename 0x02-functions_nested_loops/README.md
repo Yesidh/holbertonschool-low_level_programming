@@ -1,0 +1,1 @@
+I'm a Holberton student, in this project i'm going to learn about flags in gcc Werror, Wall, Wextra and pedantic. Betty style and header file.
