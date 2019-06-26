@@ -1,1 +1,0 @@
-this project is about debugging, some methods of debuggin manually and how to read the error messages, i will correct some programs that have some errors
