@@ -9,13 +9,13 @@
 void  print_diagonal(int n)
 {
 	int a = 0, b = 0;
-	int  d = 1;
+	int  d = 0;
 
 	if (n > 0)
 	{
 		while (a <  n)
 		{
-			if ( d <= n)
+			if ( d < n)
 			{
 				while (b < d)
 				{
