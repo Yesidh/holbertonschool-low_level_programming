@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * print_diagonal - prints a diagonal line with \
- *@n: n times to be print the \
+ * print_diagonal - prints a diagonal line with
+ * @n: n times to be print the
  *
  * Return: diagonal line
  *
