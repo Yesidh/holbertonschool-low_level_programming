@@ -12,9 +12,9 @@ void  print_square(int size)
 
 	if (size > 0)
 	{
-		while (i <=  size)
+		while (i <  size)
 		{
-			while (j  <= size)
+			while (j  < size)
 			{
 				_putchar(35);
 				j++;
