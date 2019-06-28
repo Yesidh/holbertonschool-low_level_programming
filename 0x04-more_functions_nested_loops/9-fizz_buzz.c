@@ -17,8 +17,10 @@ int  main(void)
 		{
 			if ((a == 0) && (b != 0))
 				printf("Fizz ");
-			else if ((b == 0) && (a != 0))
+			else if ((b == 0) && (a != 0) && (i <= 99))
 				printf("Buzz ");
+			else if ((b == 0) && (a != 0) && (i == 100))
+				printf("Buzz");
 			else if ((a == 0) && (b == 0))
 				printf("FizzBuzz ");
 		}
