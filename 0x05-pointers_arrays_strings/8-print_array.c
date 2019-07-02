@@ -20,6 +20,5 @@ void print_array(int *a, int n)
 		printf("%d, ", a[n]);
 		n++;
 	}
-	printf("%d", a[n]);
-	printf("\n");
+	printf("%d\n", a[n]);
 }
