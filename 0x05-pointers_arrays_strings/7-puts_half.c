@@ -23,9 +23,9 @@ void puts_half(char *str)
 			i++;
 		}
 	}
-	else
+	else if (j != 0)
 	{
-		i = (i - 1) / 2;
+		i = ((i + 1) / 2);
 		while (str[i])
 		{
 			_putchar(str[i]);
