@@ -1,0 +1,1 @@
+I'm Holberton student, in this project I'm learning about more pointers, arrays and strings.
