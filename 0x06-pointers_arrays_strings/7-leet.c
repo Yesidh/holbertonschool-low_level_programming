@@ -9,7 +9,20 @@
 char *leet(char *s)
 {
 	int i = 0, j = 0;
+	char *arr1 = "aAeEoOtTlL";
+	char *arr2 = "4433007711";
 
-	s[i] = s[i] + j;
+	while (s[i])
+	{
+		while (arr1[j] && arr2[j])
+		{
+			if (s[i] == arr1[j])
+			{
+				s[i] = arr2[j];
+			}
+			j++;
+		}
+		i++;
+	}
 	return (s);
 }
