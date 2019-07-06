@@ -9,7 +9,22 @@
 char *rot13(char *s)
 {
 	int i = 0, j = 0;
+	char *ar1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *ar2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	s[i] = s[i] + j;
+	while (s[i])
+	{
+		while (ar1[j])
+		{
+			if (s[i] == ar1[j])
+			{
+				s[i] = ar2[j];
+				break;
+			}
+			j++;
+		}
+		j = 0;
+		i++;
+	}
 	return (s);
 }
