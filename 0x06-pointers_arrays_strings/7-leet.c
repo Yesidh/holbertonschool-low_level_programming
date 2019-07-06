@@ -14,15 +14,14 @@ char *leet(char *s)
 
 	while (s[i])
 	{
-		while (arr1[j] && arr2[j])
+		while (arr1[j])
 		{
 			if (s[i] == arr1[j])
-			{
 				s[i] = arr2[j];
-			}
 			j++;
 		}
 		i++;
+		j = 0;
 	}
 	return (s);
 }
