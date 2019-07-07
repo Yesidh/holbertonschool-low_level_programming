@@ -1,15 +1,26 @@
 #include "holberton.h"
 /**
- * print_number - encodes a string using rot13
- * @n: string
+ * print_number - prints an integer
+ * @n: integer num
  *
  *
- * Return: string s
+ * Return: nothing
  */
 void print_number(int n)
 {
-	int i = 0, j = 0;
+	int n2 = 0;
 
-	n = i + j;
-	n++;
+	if (n < 0)
+	{
+		_putchar('-');
+		n = n * (-1);
+	}
+	while (n >= 0)
+	{
+		n2 = (n2 % 10) * 10 + (n / 10);
+		_putchar((n % 10) + '0');
+		n = n / 10;
+		if (n == 0)
+			n = -1;
+	}
 }
