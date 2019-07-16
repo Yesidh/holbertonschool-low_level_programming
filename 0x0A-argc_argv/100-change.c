@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	{
 		if (num >= coins[i])
 		{
-			change += num /coins[i];
+			change += num / coins[i];
 			num = num % coins[i];
 		}
 		i++;
