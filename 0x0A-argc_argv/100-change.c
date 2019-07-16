@@ -8,7 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int num, change = 0;
+	int num, i = 0, change = 0;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc == 1 || argc > 2)
 	{
@@ -21,28 +22,15 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	num = atoi(argv[1]);
-	if (num >= 25)
+	while (coins[i] != '\0')
 	{
-		change += num / 25;
-		num = num % 25;
+		if (num >= coins[i])
+		{
+			change += num /coins[i];
+			num = num % coins[i];
+		}
+		i++;
 	}
-	if (num >= 10)
-	{
-		change += num / 10;
-		num = num % 10;
-	}
-	if (num >= 5)
-	{
-		change += num / 5;
-		num = num % 5;
-	}
-	if (num >= 2)
-	{
-		change += num / 2;
-		num = num % 2;
-	}
-	if (num >= 1)
-		change += num;
 	printf("%d\n", change);
 	return (0);
 }
