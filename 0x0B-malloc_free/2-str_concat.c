@@ -15,13 +15,13 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	for (i = 0; s1[i]; i++)
+	for (i = 0; s1 != NULL && s1[i]; i++)
 	{
 	}
-	for (j = 0; s2[j]; j++)
+	for (j = 0; s2 != NULL && s2[j]; j++)
 	{
 	}
-	str3 = malloc((i * sizeof(char)) + (j * sizeof(char)) + 2);
+	str3 = malloc((i * sizeof(char)) + (j * sizeof(char)) + 1);
 	if (str3 == NULL)
 		return (NULL);
 	for (i = 0; s1[i]; i++)
