@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	num = atoi(argv[1]);
-	while (coins[i] != '\0')
+	while (coins[i])
 	{
 		if (num >= coins[i])
 		{
