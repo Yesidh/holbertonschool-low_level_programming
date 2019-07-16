@@ -8,18 +8,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
+	int i = 1;
 
-	if (argc != 1 && argc > 0)
+	if (argc == 1 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (argc < 0)
+	if (atoi(argv[i]) < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	printf("argv %s\n", argv[i]);
+	printf("listos pa programar\n");
+	printf("%d\n", argc);
 	return (0);
 }
