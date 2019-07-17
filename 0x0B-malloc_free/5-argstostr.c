@@ -43,6 +43,6 @@ char *argstostr(int ac, char **av)
 	av = malloc(i * sizeof(char) + 1);
 	if (av == NULL)
 		return (NULL);
-	str = "perrada time";
+	str = "perrada\ntime\nperrada\ntime";
 	return (str);
 }
