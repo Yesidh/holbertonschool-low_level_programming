@@ -1,6 +1,20 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
+ * _strlen_recursion - returns the length of a string
+ *@s: string
+ *
+ *
+ * Return: length of a string
+ */
+int _strlen_recursion(char *s)
+{
+	if (s && *s)
+		return (_strlen_recursion(++s) + 1);
+	else
+		return (0);
+}
+/**
  * _strcat - concatenate two string
  * @dest:dest pointer
  * @src: source pointer
@@ -11,9 +25,9 @@ char *_strcat(char *dest, char *src)
 {
 	int i = 0, j = 0;
 
-	while (dest[i])
+	while (dest && dest[i])
 		i++;
-	while (src[j])
+	while (src && src[j])
 	{
 		dest[i] = src[j];
 		i++;
@@ -31,18 +45,21 @@ char *_strcat(char *dest, char *src)
  */
 char *argstostr(int ac, char **av)
 {
-	int i;
+	int i, ln = 0;
 	char *str;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; *av; i++)
-	{
-	}
-	av = malloc(i * sizeof(char) + 1);
-	if (av == NULL)
+	for (i = 0; i <= ac; i++)
+		ln +=_strlen_recursion(av[i]);
+	str = malloc(ln +1);
+	if (str == NULL)
 		return (NULL);
-	str = "perrada\ntime\nperrada\ntime";
+	for (i = 0; i < ac; i++)
+	{
+		_strcat(str, av[i]);
+		_strcat(str, "\n");
+	}
 	return (str);
 }
