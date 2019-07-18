@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strlen_recursion - returns the length of a string
  *@s: string
@@ -52,7 +53,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i <= ac; i++)
 		ln += _strlen_recursion(av[i]) + 1;
-	str = malloc(ln + 1);
+	str = malloc(sizeof(char) * ln);
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
