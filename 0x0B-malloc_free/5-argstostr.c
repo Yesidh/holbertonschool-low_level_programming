@@ -51,8 +51,8 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i <= ac; i++)
-		ln +=_strlen_recursion(av[i]) + 1;
-	str = malloc(ln +1);
+		ln += _strlen_recursion(av[i]) + 1;
+	str = malloc(ln + 1);
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
