@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "dog.h"
+#include <stdio.h>
 /**
  * free_dog - frees the memory of function dog
  *@d: pointer to dog structure
