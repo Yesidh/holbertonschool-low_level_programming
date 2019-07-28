@@ -9,7 +9,7 @@ void print_char(va_list anything)
 	printf("%c", va_arg(anything, int));
 }
 /**
- * print_integer - function that prints an integer number
+ * print_int - function that prints an integer number
  * @anything: variable type va_list
  * Return: nothing
  */
@@ -45,7 +45,7 @@ void print_string(va_list anything)
 }
 /**
  * print_all - print anything
- * @anything: string to be printer between strings
+ * @format: constant format to print
  *
  *
  * Return: nothing
