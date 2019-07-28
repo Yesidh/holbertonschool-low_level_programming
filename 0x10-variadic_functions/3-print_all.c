@@ -39,7 +39,7 @@ void print_string(va_list anything)
 	if (toprint == NULL)
 	{
 		printf("(nil)");
-		return ;
+		return;
 	}
 	printf("%s", toprint);
 }
@@ -67,21 +67,21 @@ void print_all(const char * const format, ...)
 	{
 		j = 0;
 		while (j < 4)
+		{
+			if (format[i] == vec[j].c[0])
 			{
-				if (format[i] == vec[j].c[0])
+				switch (k)
 				{
-					switch (k)
-					{
-						case 0:
-							break;
-						default:
-							printf(", ");
-					}
-					vec[j].ptr(anything);
-					k++;
+				case 0:
+					break;
+				default:
+					printf(", ");
 				}
-				j++;
+				vec[j].ptr(anything);
+				k++;
 			}
+			j++;
+		}
 		i++;
 	}
 	printf("\n");
