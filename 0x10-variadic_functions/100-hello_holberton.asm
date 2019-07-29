@@ -1,5 +1,5 @@
 section .data
-	msg db "Hello, Holberton",0xa 	;defines bytes and labels for memory address "text"
+	msg db 'Hello, Holberton',0xa 	;defines bytes and labels for memory address "text"
 	msglen equ $ - msg
 
 section .text
