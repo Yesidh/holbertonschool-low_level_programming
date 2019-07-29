@@ -1,3 +1,8 @@
+/**
+ * main - assembly code to print Hello, Holberton
+ *
+ * Return: nothing
+ */
 int main(void) {
   register int    syscall_no  asm("rax") = 1
   register int    arg1        asm("rdi") = 1
