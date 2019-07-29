@@ -1,13 +1,16 @@
-/**
- * main - assembly code to print Hello, Holberton
- *
- * Return: nothing
- */
-int main(void) {
-  register int    syscall_no  asm("rax") = 1
-  register int    arg1        asm("rdi") = 1
-  register char*  arg2        asm("rsi") = "Hello, Holberton\n"
-  register int    arg3        asm("rdx") = 14
-  asm("syscall")
-  return 0
-}
+section .data
+	text db "Hello, Holberton",10
+
+section .text
+	global _start
+
+_start:
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, text
+	mov rdx, 17
+	syscall
+
+	mov rax, 60
+	mov rdi, 0
+	syscall
