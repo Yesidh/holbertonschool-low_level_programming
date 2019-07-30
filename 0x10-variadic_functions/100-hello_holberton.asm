@@ -3,9 +3,9 @@ section .data
 	msglen equ $ - msg
 
 section .text
-	global _start
+	global main
 
-_start:				;this line es called label
+main:				;this line es called label
 	mov rax,1		;this block is for sys_write(1,text,17)
 	mov rdi,1
 	mov rsi,msg
