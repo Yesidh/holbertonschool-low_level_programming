@@ -12,16 +12,16 @@
 ## Example
   
 ## Prerequisites
-
+language c and compiler gcc and nasm
 ## Built With
-
+gcc 4.8.4, ubuntu 14.04
 ## Contributing
 
 -- Yesid Gutierrez - Holberton Student                                        
 
 ## Versioning
 
-V 0.0 for manual review
+Holberton School checks
 
 ## Authors
 
@@ -37,17 +37,17 @@ V 0.0 for manual review
 | Task 2  | |
 | Task 3  |  |
 | Task 4  | |
-| Task 5  | |
-| Task 6  | |
+| Task 5  |Using the macro __attribute__((construntor)) |
+| Task 6  |using assembler code to print Hello, Holberton |
 ## Files
 
 | File               | Description                              |
 | ------------------ | ---------------------------------------- |
-|       | |
-|     |  |
-|       | |
-|      |  |
-|   ||
-|     | |
-|      |  |
-|       |  |
+|      		               |  |
+|			       |  |
+|			       |  |
+|			       |  |
+|			       |  |
+|                              |  |
+| 100_first.c                  |print the function first that the main  |
+| 101-hello_holberton.asm      |assembler code to print Hello Holberton doing a called for the function printf() |
