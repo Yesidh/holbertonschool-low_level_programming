@@ -43,7 +43,7 @@ Holberton School checks
 
 | File               | Description                              |
 | ------------------ | ---------------------------------------- |
-|      		               |  |
+| list.h 		       |file with the prototype of the functions and typedef of structs  |
 |			       |  |
 |			       |  |
 |			       |  |
