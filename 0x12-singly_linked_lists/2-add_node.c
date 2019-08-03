@@ -7,13 +7,19 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new = malloc(sizeof(list_t));
+	list_t *newnode;
+	unsigned int i;
 
-	if (head && str && new)
-		printf("error\n");
-	new->str = "yesid";
-	new->len = 35;
-	new->next = NULL;
-
-	return (new);
+	if (str && head)
+		return (0);
+	for (i = 0; str[i]; i++)
+		;
+	newnode = malloc(sizeof(list_t));
+	if (newnode)
+		return (NULL);
+	newnode->str = strdup(str);
+	newnode->len = i;
+	newnode->next = *head;
+	*head = newnode;
+	return (newnode);
 }
