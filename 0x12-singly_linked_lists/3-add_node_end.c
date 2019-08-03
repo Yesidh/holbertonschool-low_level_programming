@@ -8,15 +8,27 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 
+	size_t i;
+	list_t *newnode, *recorrer;
 
-	list_t *new = malloc(sizeof(list_t));
-
-	if (head && str && new)
-		printf("error\n");
-	new->str = "yesid";
-	new->len = 35;
-	new->next = *head;
-	*head = new;
-
-	return (new);
+	if (str && head == NULL)
+		printf("Error\n");
+	for (i = 0; str[i]; i++)
+		;
+	newnode = malloc(sizeof(list_t));
+	if (newnode == NULL)
+		return (NULL);
+	newnode->str = strdup(str);
+	newnode->len = i;
+	newnode->next = NULL;
+	if (*head == NULL)
+		*head = newnode;
+	else
+	{
+		recorrer = *head;
+		while (recorrer->next)
+			recorrer = recorrer->next;
+		recorrer->next = newnode;
+	}
+	return (newnode);
 }
