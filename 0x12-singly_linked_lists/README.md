@@ -12,7 +12,7 @@ and the macro __atribute__((constructor))
   
 ## Example
 int main(void)
-{
+.PP{
     list_t *head;
     list_t *new;
     list_t hello = {"World", 5, NULL};
@@ -35,7 +35,7 @@ int main(void)
     free(new);
     return (0);
 }
-Output:
+.PPOutput:
 -> 2 elements
 
 ## Prerequisites
