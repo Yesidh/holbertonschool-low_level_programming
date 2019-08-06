@@ -9,7 +9,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *newnode, *recorrer;
 
-	if (head == NULL && n)
+	if (&*head)
 		printf("Error\n");
 	newnode = malloc(sizeof(listint_t));
 	if (newnode == NULL)
