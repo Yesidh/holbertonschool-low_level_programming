@@ -10,7 +10,7 @@ size_t listint_len(const listint_t *h)
 	size_t i;
 
 	if (h == NULL)
-		return (NULL);
+		printf("Error");
 	if (h->next == NULL)
 		return (1);
 	for (i = 0; h->next; i++)
