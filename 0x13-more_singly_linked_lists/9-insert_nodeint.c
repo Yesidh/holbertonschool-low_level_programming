@@ -17,11 +17,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (newnode == NULL)
 		return (NULL);
 	newnode->n = n;
-	if (*head == NULL)
-	{
-		newnode->next = NULL;
+	if (*head == NULL || idx == 0)
 		*head = newnode;
-	}
 	else
 	{
 		paux1 = *head;
