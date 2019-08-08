@@ -6,14 +6,10 @@
  */
 void print_binary(unsigned long int n)
 {
-        int i, j;
+	int i;
 
-	for (i = 31; i >= 0; i--)
-	{
-		j = n >> i;
-		if (j & 1)
-			printf("1");
-		else
-			printf("0");
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	i = n & 1;
+	_putchar(i + '0');
 }
