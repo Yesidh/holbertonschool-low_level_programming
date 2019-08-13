@@ -9,10 +9,10 @@
 # File I/O
 How to create, open, close, read and write files                              
 what are files descriptors?                                                   
-What are the 3 standard file descriptors.
-How to use flags O_RONLY, O_WRONLY and O_RDWR
-What is a system call
-Difference between a function and a system call
+What are the 3 standard file descriptors.                                     
+How to use flags O_RONLY, O_WRONLY and O_RDWR                                 
+What is a system call                                                         
+Difference between a function and a system call                               
 ## Example
 ## Prerequisites
 language c and compiler gcc with the flags:
