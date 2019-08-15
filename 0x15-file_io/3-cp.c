@@ -35,13 +35,13 @@ int main(int argc, char **a)
 		exit(97);
 	}
 	fd2 = open(a[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	if (fd2 == 2)
+	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", a[2]);
 		exit(99);
 	}
 	fd1 = open(a[1], O_RDONLY);
-	if (fd1 == 2)
+	if (fd1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", a[1]);
 		exit(98);
@@ -50,13 +50,13 @@ int main(int argc, char **a)
 	while (sbuf == 1024)
 	{
 		sbuf = read(fd1, buf, 1024);
-		if (sbuf == 2)
+		if (sbuf == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", a[1]);
 			exit(98);
 		}
 		sw = write(fd2, buf, sbuf);
-		if (sw == 2)
+		if (sw == -1)
 		{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", a[2]);
 		exit(99);
