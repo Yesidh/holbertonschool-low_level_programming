@@ -34,7 +34,7 @@ int main(int argc, char **a)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd2 = open(a[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	fd2 = open(a[2], O_RDWR | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", a[2]);
