@@ -21,7 +21,7 @@ void close_fd(int fd1, int fd2)
 /**
  * main - function that appends text at the end of a file
  * @argc: numbers of arguments
- * @a: array with arguments
+ * @argv: array with arguments
  * Return: 1 on success -1 on failure
  */
 int main(int argc, char *argv[])
