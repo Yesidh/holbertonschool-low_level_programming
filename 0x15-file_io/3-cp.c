@@ -62,5 +62,6 @@ int main(int argc, char **a)
 		exit(99);
 		}
 	}
+	close_fd(fd1, fd2);
 	return (0);
 }
