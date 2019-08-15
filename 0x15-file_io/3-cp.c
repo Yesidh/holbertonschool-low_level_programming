@@ -1,5 +1,24 @@
 #include "holberton.h"
 /**
+ * close_fd - function that close file descriptors
+ * @fd1: file descriptor 1
+ * @fd2: file descriptor 2
+ * Return: nothing
+ */
+void close_fd(int fd1, int fd2)
+{
+	if (fd1 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: cant't close fd %d\n", fd1);
+		exit(100);
+	}
+	if (fd2 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Cant't close fd %d\n", fd2);
+		exit(100);
+	}
+}
+/**
  * main - function that appends text at the end of a file
  * @argc: numbers of arguments
  * @argv: array with arguments
@@ -7,7 +26,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int  fd1, fd2, sbuf, sw;
+	int  fd1, fd2, sbuf, sw, cfd1, cfd2;
 	char buf[1024];
 
 	if (argc != 3)
@@ -43,15 +62,8 @@ int main(int argc, char *argv[])
 		exit(99);
 		}
 	}
-	if (close(fd1) < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: cant't close fd %d\n", fd1);
-		exit(100);
-	}
-	if (close(fd2) < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Cant't close fd %d\n", fd2);
-		exit(100);
-	}
+	cfd1 = close(fd1);
+	cfd2 = close(fd2);
+	close_fd(cfd1, cfd2);
 	return (0);
 }
