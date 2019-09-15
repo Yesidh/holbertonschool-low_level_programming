@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * print_dlistint - function that prints all elements of a dlistint_t list
+ * dlistint_len - Function that returns the lenght of double linked lists
  * @h: pointer where start the list
- * Return: The number of nodes
+ * Return: lenght of the list
  */
 size_t dlistint_len(const dlistint_t *h)
 {
