@@ -31,7 +31,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		paux1 = (paux2->next)->next;
 		free(paux2->next);
-		puax2->next = paux1;
+		paux2->next = paux1;
 		return (1);
 	}
 }
