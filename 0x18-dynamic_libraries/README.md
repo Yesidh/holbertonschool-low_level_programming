@@ -43,3 +43,4 @@ for my learning in Holberton School
 | **libholberton.so** | Dynamic libraty|
 | **1-create_dynamic_lib.sh** | script that creates a dynamic library called liball.so from all the .c files that are in the curretn directory|
 | **holberton.h** | Header file with all prototypes functions|
+| **100-operation.so**| dynamic library that import C functions|
