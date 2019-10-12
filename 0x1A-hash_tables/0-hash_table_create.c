@@ -20,6 +20,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	ptr->array = malloc(size * sizeof(hash_node_t *));
 	if (ptr->array == NULL)
 		return (NULL);
+	memset(ptr->array, 0, size * sizeof(hash_node_t *));
 
 	ptr->size = size;
 	return (ptr);
