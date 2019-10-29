@@ -12,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *aux1, *aux2, *aux3;
 	int flag = 0, flag2 = 0;
 
-	if (*list == NULL)
+	if (*list == NULL || list == NULL || (*list)->next == NULL)
 		return;
 
 	aux1 = *list;
