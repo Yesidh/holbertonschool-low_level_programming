@@ -11,25 +11,24 @@ void shell_sort(int *array, size_t size)
 	size_t gaps = 1, out = 0, inter = 0;
 	int value = 0;
 
-	if (array && size)
+	if (array == NULL || size < 2)
+		return;
+	while (gaps < size / 3)
+		gaps = gaps * 3 + 1;
+	while (gaps > 0)
 	{
-		while (gaps < size / 3)
-			gaps = gaps * 3 + 1;
-		while (gaps > 0)
+		for (out = gaps; out < size; out++)
 		{
-			for (out = gaps; out < size; out++)
+			value = array[out];
+			inter = out;
+			while (inter > (gaps - 1) && array[inter - gaps] >= value)
 			{
-				value = array[out];
-				inter = out;
-				while (inter > (gaps - 1) && array[inter - gaps] >= value)
-				{
-					array[inter] = array[inter - gaps];
-					inter = inter - gaps;
-				}
-				array[inter] = value;
+				array[inter] = array[inter - gaps];
+				inter = inter - gaps;
 			}
-			gaps = (gaps - 1) / 3;
-			print_array(array, size);
+			array[inter] = value;
 		}
+		gaps = (gaps - 1) / 3;
+		print_array(array, size);
 	}
 }
