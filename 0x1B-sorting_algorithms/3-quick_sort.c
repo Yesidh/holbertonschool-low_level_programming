@@ -1,12 +1,12 @@
 #include "sort.h"
 /**
- * quick_sort - Function that sorts an array of integers in ascending order
- * using the Quick sort
- * @array: array of integers
- * @size: size of array of integers
- * Return: Anything
+ * pivoting - swap th values and evaluate the new pivot
+ * @array: integer array
+ * @low: lower idx
+ * @high: higher idx
+ * @size: array's size
+ * Return: new pivot
  */
-
 size_t pivoting(int *array, int low, int high, size_t size)
 {
 	int pivot, aux, i, j;
