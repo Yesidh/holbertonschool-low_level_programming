@@ -1,0 +1,25 @@
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(patsubst %.c,%.o, $(SRC))
+NAME = holberton
+RM = rm -f
+
+# this rule compile the main program called holberton in the rule all
+# using Function for Strings Substitution and Analysis, in this case
+# $(patsubst) pattern, replacement, text)
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) *.o
+
+fclean:
+	$(RM) *~ $(NAME)
+	$(RM) *.o
+
+re:
+	$(CC) $(OBJ) -o $(NAME)
