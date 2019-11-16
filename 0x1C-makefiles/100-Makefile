@@ -21,6 +21,3 @@ oclean:
 fclean: clean oclean
 
 re: oclean all
-
-$(RM):
-	rm -f
