@@ -1,5 +1,5 @@
 
 # this rule compile the main program called holberton
 
-holberton: main.c holberton.c
+all: main.c holberton.c
 	gcc main.c holberton.c -o holberton

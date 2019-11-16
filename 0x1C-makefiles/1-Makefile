@@ -3,5 +3,5 @@ SRC = main.c holberton.c
 
 # this rule compile the main program called holberton
 
-holberton: $(SRC)
+all: $(SRC)
 	$(CC) $(SRC) -o holberton
