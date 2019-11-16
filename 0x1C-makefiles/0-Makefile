@@ -1,15 +1,5 @@
-all: holberton
 
 # this rule compile the main program called holberton
 
-holberton: main.o holberton.o
-	gcc main.o holberton.o -o holberton
-
-main.o: main.c m.h
-	gcc -c main.c
-
-holberton.o: holberton.c m.h
-	gcc -c holberton.c
-
-clean:
-	rm -f holberton *.o
+holberton: main.c holberton.c
+	gcc main.c holberton.c -o holberton
