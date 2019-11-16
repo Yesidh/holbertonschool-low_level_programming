@@ -1,0 +1,15 @@
+CC = gcc
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+NAME = holberton
+
+# this rule compile the main program called holberton in the rule all
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o holberton
+
+main.o: main.c m.h
+	$(CC) -c main.c
+
+holberton.o: holberton.c m.h
+	$(CC) -c holberton.c
