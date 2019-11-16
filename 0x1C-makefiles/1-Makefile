@@ -1,0 +1,7 @@
+CC = gcc
+SRC = main.c holberton.c
+
+# this rule compile the main program called holberton
+
+holberton: $(SRC)
+	$(CC) $(SRC) -o holberton
