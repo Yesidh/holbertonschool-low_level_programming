@@ -40,9 +40,9 @@ for my learning in Holberton School
                                                                                 
 |              File                |               Description                  |
 | ---------------------------------| ------------------------------------------ |
-|**0-Makefile**|
-|**1-Makefile**|
-|**2-Makefile**|
-|**3-Makefile**|
-|**4-Makefile**|
-|**5-island_perimeter.py**|
+|**0-Makefile**| executable with the rule all for make a executable from holberton.c and main.c|
+|**1-Makefile**| Executable with the rule all for make a executable from holberton.c and main.c using variables CC and SRC|
+|**2-Makefile**| Executable with the rule all for make a executable from holberton.c and main.c using variables CC, SRC, OBJ and NAME|
+|**3-Makefile**|Executable with the rule all, clean, oclean, fclean and re for make a executable from holberton.c and main.c using variables CC, SRC, OBJ, NAME and RM|
+|**4-Makefile**| Executable with the rule all, clean, oclean, fclean and re for make a executable from holberton.c and main.c using variables CC, SRC, OBJ, NAME, RM and CFLAGS|
+|**5-island_perimeter.py**| function that returns the perimeter of the island of numbers"
