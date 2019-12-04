@@ -27,7 +27,7 @@ gcc 4.8.4 and ubuntu 14.04
                                                                                 
 ## Contributing                                                                 
                                                                                 
--- Nicolas Moran - Holberton Student
+-- Nicolas Moran - Holberton Student                                            
 -- Yesid Gutierrez - Holberton Student                                          
                                                                                 
 ## Versioning                                                                   
@@ -35,7 +35,7 @@ for my learning in Holberton School
                                                                                 
 ## Authors                                                                      
                                                                                 
----Nicolas Moran  956@holbertonschool.com
+---Nicolas Moran  956@holbertonschool.com                                       
 ---Yesid Gutierrez  944@holbertonshcool.com                                     
                                                                                 
 ## Files                                                                        
@@ -56,7 +56,7 @@ for my learning in Holberton School
 |**11-binary_tree_size.c**| function that measures the size of a binary tree
 |**12-binary_tree_leaves.c**| function that counts the leaves in a binary tree
 |**13-binary_tree_nodes.c**| function that counts the nodes with at least 1 child in a binary tree
-|**14-binary_tree_balance.c** function that measures the balance factor of a binary tree
+|**14-binary_tree_balance.c**| function that measures the balance factor of a binary tree
 |**15-binary_tree_is_full.c**| function that checks if a binary tree is full
 |**16-binary_tree_is_perfect.c**| function that checks if a binary tree is perfect
 |**17-binary_tree_sibling.c**|  function that finds the sibling of a node
