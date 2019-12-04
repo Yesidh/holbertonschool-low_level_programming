@@ -1,46 +1,26 @@
 #include "binary_trees.h"
+
 /**
- * binary_tree_balance_left - function that measures
- * the left height of a subtree
+ * binary_tree_height - function that measures
+ * the height of a binary tree
  *
- * @tree_left: is a pointer to the root node of the tree to measure the size
+ * @tree: is a pointer to the root node of the tree to measure the height.
  *
- * Return: if tree is NULL, 0
+ * Return: If tree is NULL, return 0
  */
-
-int binary_tree_balance_left(const binary_tree_t *tree_left)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-	int yesid = 0;
+	size_t counter = 0, counter1 = 0;
 
-	if (!tree_left->left)
+	if (tree == NULL || (tree->left == NULL && tree->right == NULL))
 		return (0);
-	while (tree_left->left)
-	{
-		yesid += 1;
-		tree_left = tree_left->left;
-	}
-	return (yesid);
-}
-/**
- * binary_tree_balance_right - function that measures
- * the right height of a subtree
- *
- * @tree_right: is a pointer to the root node of the tree to measure the size
- *
- * Return: if tree is NULL, 0
- */
-int binary_tree_balance_right(const binary_tree_t *tree_right)
-{
-	int nicolas = 0;
-
-	if (!tree_right->right)
-		return (0);
-	while (tree_right->right)
-	{
-		nicolas += 1;
-		tree_right = tree_right->right;
-	}
-	return (nicolas);
+	if (tree->left)
+		counter = binary_tree_height(tree->left);
+	if (tree->right)
+		counter1 = binary_tree_height(tree->right);
+	if (counter >= counter1)
+		return (1 + counter);
+	return (1 + counter1);
 }
 
 /**
@@ -57,7 +37,15 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-	yesid = binary_tree_balance_left(tree);
-	nicolas = binary_tree_balance_right(tree);
+	if (tree->left)
+	{
+		yesid = binary_tree_height(tree->left);
+		yesid += 1;
+	}
+	if (tree->right)
+	{
+		nicolas = binary_tree_height(tree->right);
+		nicolas += 1;
+	}
 	return (yesid - nicolas);
 }
