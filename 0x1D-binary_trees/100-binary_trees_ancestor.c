@@ -38,7 +38,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	depth_first = binary_tree_depth(first);
 	depth_second = binary_tree_depth(second);
 
-	if (!first || !second || (!first->parent || !second->parent))
+	if (!first || !second || (!first->parent && !second->parent))
 		return (NULL);
 
 	while (depth_first != depth_second)
